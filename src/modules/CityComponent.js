@@ -48,17 +48,26 @@ const SearchBox = styled.form`
 
 
 
-function CityComponent() {
+
+function CityComponent(props) {
+
+
+  const { updateCity, fetchWeather } = props;
+
     return (
-        <>
-            <WeatherLogo src='/icons/perfect-day.svg' />
-            <ChooseCityLabel>Find Weather of your city</ChooseCityLabel>
-            <SearchBox>
-                <input type="text" placeholder='City' />
-                <button>Search</button>
-            </SearchBox>
-        </>
-    )
+      <>
+        <WeatherLogo src="/icons/perfect-day.svg" />
+        <ChooseCityLabel>Find Weather of your city</ChooseCityLabel>
+        <SearchBox onSubmit={fetchWeather}>
+          <input
+            type="text"
+            placeholder="City"
+            onChange={(e) => updateCity(e.target.value)}
+          />
+          <button type={"submit"}>Search</button>
+        </SearchBox>
+      </>
+    );
 }
 
 export default CityComponent
