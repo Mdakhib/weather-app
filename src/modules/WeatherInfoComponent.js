@@ -66,14 +66,14 @@ const WeatherInfoLabel = styled.span`
   width: 90%;
 `;
 
-const WeatherContainer = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 30px auto;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
+// const WeatherContainer = styled.div`
+//   display: flex;
+//   width: 100%;
+//   margin: 30px auto;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+// `;
 
 const WeatherInfoContainer = styled.div`
   display: flex;
