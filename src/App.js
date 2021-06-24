@@ -19,6 +19,12 @@ const Container = styled.div`
   width: 360px;
   background-color: white;
   font-family: "Montserrat", sans-serif;
+
+  @media (max-width:500px){
+    width:280px;
+padding:15px 10px;
+  }
+
 `;
 
 const AppLabel = styled.span`
