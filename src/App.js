@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import CityComponent from "./modules/CityComponent";
-// import { WeatherComponent } from "./modules/WeatherInfoComponent";
+import WeatherComponent from "./modules/WeatherInfoComponent";
 
 const Container = styled.div`
   display: flex;
@@ -25,8 +25,8 @@ function App() {
   return (
     <Container>
       <AppLabel>Weather App</AppLabel>
-      <CityComponent />
-      {/* <WeatherComponent /> */}
+      {/* <CityComponent /> */}
+      <WeatherComponent />
     </Container>
   );
 }
