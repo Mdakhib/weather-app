@@ -11,6 +11,24 @@ export const WeatherInfoIcons = {
   pressure: "icons/pressure.svg",
 };
 
+
+export const WeatherIcons = {
+  "01d": "/icons/sunny.svg",
+  "01n": "/icons/night.svg",
+  "02d": "/icons/day.svg",
+  "02n": "/icons/cloudy-night.svg",
+  "03d": "/icons/cloudy.svg",
+  "03n": "/icons/cloudy.svg",
+  "04d": "/icons/perfect-day.svg",
+  "04n": "/icons/cloudy-night.svg",
+  "09d": "/icons/rain.svg",
+  "09n": "/icons/rain-night.svg",
+  "10d": "/icons/rain.svg",
+  "10n": "/icons/rain-night.svg",
+  "11d": "/icons/storm.svg",
+  "11n": "/icons/storm.svg",
+};
+
 const WeatherCondition = styled.div`
   display: flex;
   flex-direction: row;
@@ -119,7 +137,7 @@ function WeatherComponent(props) {
           <span>{`${Math.floor(weather?.main?.temp - 273)}°C`}</span> |{" "}
           {`${weather?.weather[0].description}`}
         </Condition>
-        <WeatherLogo src="/icons/perfect-day.svg" />
+        <WeatherLogo src={WeatherIcons[weather?.weather[0].icon]} />
       </WeatherCondition>
       <Location>{`${weather?.name}, ${weather?.sys?.country}`} </Location>
       <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
